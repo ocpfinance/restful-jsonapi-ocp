@@ -9,7 +9,7 @@ module Restful
       end
 
       initializer "restful-jsonapi.active_model_serializer" do
-        ActiveModel::Serializer.class_eval do
+        ActiveModel::Serializers.class_eval do
           include Restful::Jsonapi::ActiveModelSerializer
         end
       end if defined? ActiveModel::Serializer
